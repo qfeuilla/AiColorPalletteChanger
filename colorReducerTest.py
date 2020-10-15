@@ -21,7 +21,7 @@ for i in range(colorNumber):
 for xPos in range(len(data)):
     y = data[xPos]
     for yPos in range(len(data[xPos])):
-        index = crt.indexNearCluster(clusters, y[yPos])
+        index = crt.indexNearestCluster(clusters, y[yPos])
         imageDataResult[xPos][yPos] = clusters[index].colorVector
 
 with open('test/image.txt', 'w') as f:
